@@ -38,6 +38,7 @@ Essa aplicação foi desenvolvida para estudos seguindo os ensinamentos da **[Ro
 
 Utilização do conceito de css modules, e Sass
 
+Utilização do conceito de api roots do NextJS
 
 Nele aborda a criação de um projeto do zero em <strong>JavaScript</strong>  e depois refatorado para <strong>TypeScript</strong>, também contém a configuração <strong>Webpack</strong> e <strong>Babel</strong> do zero.
 
@@ -187,10 +188,34 @@ pois ele só carrega uma vez, sendo um bom local para adicionar conteúdos desse
 <h3>Dica de desenvolvimento</h3>
 <p>Dica de desenvolvimento, sempre que for lidar com preços e valores no banco armazene eles em centavos pois fica muito mais fácil os tratamentos e manipulações.</p>
 
+<h3>Tipos de autenticação possíveis com NextJS</h3>
+<p>
+Opções:
+  * JWT (Storage)
+    Para grande maioria das aplicações que não são de grande porte, não existe método mais simples de autenticação do que:
+    * usar um JWT.
+    * salvar esse token em um Storage qualquer ( seja LocalStorage ou Cookies ).
+    * recuperar esse token.
+    * colocar uma data de expiração.
+    * trabalhar ele com refresh token.
+  * Next Auth (Social)
+    * Utilizamos quando queremos um método de autenticação simples e queremos utilizar login Social na nossa aplicação (gitHub Google facebook etc...).
+    * Utilizado também quando não queremos armazenar no nosso backend credenciais de acesso do usuário, 
+    * Ele até tem suporte para realizar autenticação com e-mail e senha mas sua ideia é dele não depender de ter um backend.
+  * Cognito (do AWS) (não foi detalhado a fundo na aula).
+  * Auth0 (não foi detalhado a fundo na aula).
+
+(que continua seguro sim!, claro NADA é 100% seguro)
+
+  JWT (Storage)
+ Next Auth (Social )
+</p>
+
+
+
+
 <h3></h3>
 <h3></h3>
-<h3></h3>
-<p></p>
 <p></p>
 <p></p>
 <p></p>
