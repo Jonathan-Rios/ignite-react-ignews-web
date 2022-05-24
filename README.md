@@ -111,6 +111,10 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE.md) pa
 
 ➜ yarn add stripe # é uma SDK (Software Development Kit), uma biblioteca para lidar diretamente com a API do stripe, para não precisar criar todas as requisições para o Stripe através de http ( o que é possível ), com a sdk mostra os métodos e rotas que existem e etc..
 
+➜ yarn add next-auth
+➜ yarn add @types/next-auth -D
+
+➜ yarn add faunadb
 ```
 
 
