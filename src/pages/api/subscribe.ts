@@ -59,7 +59,7 @@ const subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
   } else {
     res.setHeader('Allow', 'POST');
-    res.status(405).end('Method now anllowed');
+    res.status(405).end('Method not allowed');
   }
 
   return;
