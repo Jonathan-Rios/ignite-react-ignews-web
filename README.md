@@ -117,6 +117,12 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE.md) pa
 ➜ yarn add faunadb
 ➜ yarn add axios
 ➜ yarn add @stripe/stripe-js # Para utilizar recursos públicos ( sem passar chave ) para rodar client-side.
+
+➜ yarn add @prismicio/client
+
+➜ yarn add prismic-dom
+➜ yarn add -D @types/prismic-dom 
+
 ```
 
 

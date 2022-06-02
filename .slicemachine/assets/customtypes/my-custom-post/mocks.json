@@ -1,0 +1,21 @@
+{
+  "id": "f49bb5b6-e084-4945-b7db-906d301206de",
+  "uid": "sapiente-esse-architecto",
+  "type": "my-custom-post",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Velit consectetur culpa officia laborum tempor duis pariatur. Sunt dolor qui aute velit proident ut elit in cupidatat qui eu eu cupidatat. Ex sit veniam sit minim do mollit.",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Quis proident eiusmod consequat amet consectetur aute consectetur consectetur eiusmod ut officia id. Magna elit ipsum adipisicing Lorem id. Fugiat qui laboris ex consectetur laborum.",
+        "spans": []
+      }
+    ]
+  }
+}
