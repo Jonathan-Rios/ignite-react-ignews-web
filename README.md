@@ -223,10 +223,86 @@ Opções:
  Next Auth (Social )
 </p>
 
+<h3>Diferença entre usar type ou interface</h3>
+
+<p>Ambas atendem a ideia de tipagem, porém quando é necessário
+extender algum outro elemento, onde queremos adicionar algo mais, o type não permite usar o extends.
+Depois do TypeScript 2.2, parece que removeram algumas limitações da interface, assim ela atende agora além do que o type fornece.</p>
+
+
+```javascript
+
+type ActiveLinkProps1 = {
+  children: ReactElement;
+  activeClassName: string;
+};
+
+interface ActiveLinkProps2 extends LinkProps {
+  children: ReactElement;
+  activeClassName: string;
+};
+
+
+```
+<h3>Utilizando cloneElement</h3>
+
+<p>Ao criar um componente para gerenciar os estado de ativo, foi necessário passar uma propriedade para o children do elemento
+porém não é possível diretamente, então utilizamos o cloneElement, pois ele permite que modifiquemos ele.</p>
+
+```javascript
+
+import { cloneElement, ReactElement } from 'react';
+
+interface ActiveLinkProps {
+  children: ReactElement;
+  activeClassName: string;
+}
+
+export function ActiveLink({
+  children,
+  activeClassName,
+}: ActiveLinkProps) {
+
+  return (
+    <span>
+      {/* Não conseguimos passar ao children uma propriedade direta, para isso temos o recurso
+      cloneElement do react que nos permite modificar o children, nesse caso passando uma classe */}
+      {cloneElement(children, { activeClassName })}
+    </span>
+  );
+}
+```
 
 
 
-<h3></h3>
+<h3>Utilizando dangerouslySetInnerHTML no React</h3>
+
+<p>Esse recurso permite que seja gerado um html a partir de uma string contendo as tags html.</p>
+
+```javascript
+    /* Um recurso que o próprio nome já diz que é perigoso, sua funcionalidade é que ao receber de forma textual um html.
+    
+    Ex.  "<h1>Hello World</h1>" ao apresentar ela vai aparecer no texto os <h1>...,  porém queremos que a tag h1 funcione com tag e não texto.
+          
+    Esse cara recria os elementos, porém o perigo que a fonte de onde vem esses dados seja segura pois se o usuário conseguir modificar esses valores, ele pode realizar scripts maliciosos.*/
+
+    <div dangerouslySetInnerHTML={{__html: post.content}} />
+```
+
+
+<h3>Debugando um [Object] retornado</h3>
+
+<p>Recurso para formatar um objeto que fique de forma legível</p>
+
+```javascript
+  //Retorno do data dentro de um response
+  data: { title: [ [Object] ], content: [ [Object] ] }
+
+  /* Utilizando   JSON.stringify(objeto_desejado, null, 2), conseguimos que seja formatado 
+  de forma legível para apresentar no console */
+  console.log('---------', JSON.stringify(response.data, null, 2));
+```
+
 <h3></h3>
 <p></p>
 <p></p>

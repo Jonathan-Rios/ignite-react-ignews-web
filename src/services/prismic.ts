@@ -2,7 +2,7 @@
 // In Node.js Prismic projects, you must provide a fetch method to the
 // Prismic client.
 import fetch from 'node-fetch';
-import * as prismic from '@prismicio/client';
+import * as Prismic from '@prismicio/client';
 
 const repositoryName = process.env.PRISMIC_REPOSITORY;
 const accessToken = process.env.PRISMIC_ACCESS_TOKEN; // If your repository is private, add an access token.
@@ -18,8 +18,13 @@ const routes = [
   },
 ];
 
-export const PrismicClient = prismic.createClient(repositoryName, {
-  fetch,
-  accessToken,
-  routes,
-});
+export function getPrismicClient(req?: unknown) {
+  // q q eu vou aprontar com esse req ??
+  const prismic = Prismic.createClient(repositoryName, {
+    fetch,
+    accessToken,
+    routes,
+  });
+
+  return prismic;
+}
