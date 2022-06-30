@@ -1,5 +1,24 @@
 {
   "_cts": {
-    "my-custom-post": {}
+    "my-custom-post": {
+      "content": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "preview": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   }
 }
