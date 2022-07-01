@@ -88,5 +88,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       post,
       pageTitle,
     },
+    redirect: 60 * 30, // 30 minutes
   };
 };
