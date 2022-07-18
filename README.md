@@ -123,6 +123,12 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE.md) pa
 ➜ yarn add prismic-dom
 ➜ yarn add -D @types/prismic-dom 
 
+# Instalando arquitetura de testes
+➜ yarn add jest jest-dom @testing-library/jest-dom @testing-library/dom 
+@testing-library/react babel-jest jest-environment-jsdom -D
+
+➜ yarn add identity-obj-proxy #Permite entender arquivos modules de estilização ( css|scss|sass ).
+
 ```
 
 

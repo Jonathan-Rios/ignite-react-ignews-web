@@ -1,6 +1,4 @@
-import { useRouter } from 'next/router';
-
-import { SignInButton } from './SignInButton';
+import { SignInButton } from './../SignInButton';
 
 import styles from './styles.module.scss';
 import { ActiveLink } from '../ActiveLink';

@@ -7,7 +7,7 @@ import { RichText } from 'prismic-dom';
 
 import styles from './styles.module.scss';
 
-type Post = {
+export type Post = {
   slug: string;
   title: string;
   excerpt: string;
@@ -46,7 +46,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   const document = await prismic.getAllByType('my-custom-post');
-
   const posts = document.map(post => {
     return {
       slug: post.uid,
